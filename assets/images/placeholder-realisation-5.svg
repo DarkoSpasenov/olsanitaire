@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-label="REALISATION 5">
+  <defs>
+    <pattern id="p" width="26" height="26" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+      <line x1="0" y1="0" x2="0" y2="26" stroke="#ffffff" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="800" fill="#15181d"/>
+  <rect width="1200" height="800" fill="url(#p)"/>
+  <rect x="0" y="0" width="1200" height="6" fill="#1F57A7"/>
+  <rect x="0" y="0" width="336" height="6" fill="#EE2F2D"/>
+  <g fill="#ffffff" font-family="Helvetica, Arial, sans-serif" text-anchor="middle">
+    <text x="600" y="400" font-size="49" font-weight="600" fill="#ffffff" fill-opacity="0.82">REALISATION 5</text>
+    <text x="600" y="473" font-size="30" fill="#ffffff" fill-opacity="0.45">Remplacer par une photo réelle</text>
+  </g>
+  <rect x="16" y="16" width="1168" height="768" fill="none" stroke="#ffffff" stroke-opacity="0.12" stroke-dasharray="10 10"/>
+</svg>

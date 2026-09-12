@@ -28,7 +28,7 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20260912-realisations-folder">
 
   <script type="application/ld+json">
   {
@@ -279,22 +279,43 @@
           <p>Découvrez quelques-unes de nos installations et interventions réalisées sur chantier.</p>
         </header>
 
-        <div class="field-gallery__grid">
-          <figure class="field-gallery__item field-gallery__item--wide reveal">
-            <img src="assets/images/ol-equipe-intervention.webp" alt="Techniciens OL Chauffage devant un véhicule d’intervention" width="1672" height="941" loading="lazy" decoding="async">
-          </figure>
-          <figure class="field-gallery__item reveal">
-            <img src="assets/images/ol-sanitaire-intervention.webp" alt="Technicien OL Chauffage intervenant sur une installation sanitaire" width="1672" height="941" loading="lazy" decoding="async">
-          </figure>
-          <figure class="field-gallery__item reveal">
-            <img src="assets/images/chauffage-sol-chantier.webp" alt="Installation de chauffage au sol sur un chantier" width="1152" height="1536" loading="lazy" decoding="async">
-          </figure>
-          <figure class="field-gallery__item reveal">
-            <img src="assets/images/installation-sanitaire-encastree.webp" alt="Installation sanitaire encastrée avec bâti-support et raccordements" width="1152" height="1536" loading="lazy" decoding="async">
-          </figure>
-          <figure class="field-gallery__item reveal">
-            <img src="assets/images/raccordements-sanitaire-chantier.webp" alt="Raccordements sanitaires préparés dans une construction neuve" width="1152" height="1536" loading="lazy" decoding="async">
-          </figure>
+        <div class="field-slider reveal" id="fieldSlider" aria-roledescription="carrousel" aria-label="Nos réalisations">
+          <div class="field-slider__viewport">
+            <div class="field-slider__track">
+              <figure class="field-slider__slide is-active" data-slide="0">
+                <img src="photos-realisations/01-equipe-intervention.webp" alt="Techniciens OL Chauffage devant un véhicule d’intervention" width="1672" height="941" decoding="async">
+              </figure>
+              <figure class="field-slider__slide" data-slide="1" aria-hidden="true">
+                <img src="photos-realisations/02-sanitaire-intervention.webp" alt="Technicien OL Chauffage intervenant sur une installation sanitaire" width="1672" height="941" loading="lazy" decoding="async">
+              </figure>
+              <figure class="field-slider__slide" data-slide="2" aria-hidden="true">
+                <img src="photos-realisations/03-chauffage-au-sol.webp" alt="Installation de chauffage au sol sur un chantier" width="1152" height="1536" loading="lazy" decoding="async">
+              </figure>
+              <figure class="field-slider__slide" data-slide="3" aria-hidden="true">
+                <img src="photos-realisations/04-installation-sanitaire.webp" alt="Installation sanitaire encastrée avec bâti-support et raccordements" width="1152" height="1536" loading="lazy" decoding="async">
+              </figure>
+              <figure class="field-slider__slide" data-slide="4" aria-hidden="true">
+                <img src="photos-realisations/05-raccordements-sanitaire.webp" alt="Raccordements sanitaires préparés dans une construction neuve" width="1152" height="1536" loading="lazy" decoding="async">
+              </figure>
+            </div>
+
+            <button class="field-slider__arrow field-slider__arrow--prev" type="button" aria-label="Réalisation précédente">
+              <span aria-hidden="true">‹</span>
+            </button>
+            <button class="field-slider__arrow field-slider__arrow--next" type="button" aria-label="Réalisation suivante">
+              <span aria-hidden="true">›</span>
+            </button>
+
+            <div class="field-slider__counter" aria-live="polite"><span id="fieldSliderCurrent">1</span> / <span id="fieldSliderTotal">5</span></div>
+          </div>
+
+          <div class="field-slider__dots" role="tablist" aria-label="Choisir une réalisation">
+            <button class="field-slider__dot is-active" type="button" role="tab" aria-selected="true" aria-label="Voir la réalisation 1" data-slide-to="0"></button>
+            <button class="field-slider__dot" type="button" role="tab" aria-selected="false" aria-label="Voir la réalisation 2" data-slide-to="1"></button>
+            <button class="field-slider__dot" type="button" role="tab" aria-selected="false" aria-label="Voir la réalisation 3" data-slide-to="2"></button>
+            <button class="field-slider__dot" type="button" role="tab" aria-selected="false" aria-label="Voir la réalisation 4" data-slide-to="3"></button>
+            <button class="field-slider__dot" type="button" role="tab" aria-selected="false" aria-label="Voir la réalisation 5" data-slide-to="4"></button>
+          </div>
         </div>
       </div>
     </section>
@@ -577,6 +598,6 @@
     <a href="#contact" class="mobile-actions__quote">Devis</a>
   </div>
 
-  <script src="script.js" defer></script>
+  <script src="script.js?v=20260912-realisations-folder" defer></script>
 </body>
 </html>

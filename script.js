@@ -364,6 +364,26 @@
       .then(initFieldSlider);
   }
 
+
+  // Photo principale du hero
+  // L'image est détectée automatiquement dans /photo-hero/ via liste.php.
+  var heroDynamicPhoto = document.getElementById('heroDynamicPhoto');
+  if (heroDynamicPhoto) {
+    fetch('photo-hero/liste.php', { cache: 'no-store' })
+      .then(function (response) {
+        if (!response.ok) throw new Error('Liste de la photo principale indisponible');
+        return response.json();
+      })
+      .then(function (data) {
+        if (data && Array.isArray(data.photos) && data.photos.length) {
+          heroDynamicPhoto.src = 'photo-hero/' + encodeURIComponent(data.photos[0]);
+        }
+      })
+      .catch(function () {
+        // En aperçu local sans PHP, la photo définie dans le HTML reste utilisable.
+      });
+  }
+
   var year = document.getElementById('year');
   if (year) year.textContent = String(new Date().getFullYear());
 })();

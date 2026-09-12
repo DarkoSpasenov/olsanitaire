@@ -1,7 +1,4 @@
-# robots.txt — OL Chauffage Sanitaire Sàrl
-# À COMPLÉTER : remplacer le domaine ci-dessous par le domaine définitif.
-
 User-agent: *
 Allow: /
 
-Sitemap: https://www.ol-chauffage.ch/sitemap.xml
+Sitemap: https://www.olchauffage.com/sitemap.xml

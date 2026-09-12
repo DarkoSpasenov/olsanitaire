@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- sitemap.xml — OL Chauffage Sanitaire Sàrl
-     À COMPLÉTER : remplacer le domaine et la date <lastmod> lors de la mise en ligne. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.ol-chauffage.ch/</loc>
+    <loc>https://www.olchauffage.com/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.ol-chauffage.ch/mentions-legales.html</loc>
+    <loc>https://www.olchauffage.com/mentions-legales.html</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>
   <url>
-    <loc>https://www.ol-chauffage.ch/politique-confidentialite.html</loc>
+    <loc>https://www.olchauffage.com/politique-confidentialite.html</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>

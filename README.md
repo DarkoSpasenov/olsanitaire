@@ -1,223 +1,75 @@
-# Site OL Chauffage Sanitaire Sàrl
+# OL Chauffage Sanitaire Sàrl — site web
 
-Site vitrine one-page — chauffage, sanitaire et ventilation
-Z.I. Grands-Longs-Champs 7, 1562 Corcelles-près-Payerne
+Version complète statique + formulaire PHP, prête à être déposée sur un hébergement FTP classique.
 
-HTML5 / CSS3 / JavaScript vanilla. Aucune dépendance, aucun build : les fichiers
-se déposent tels quels sur un FTP classique (ou sur GitHub Pages).
+## Contenu
 
----
+- `index.html` — page principale
+- `style.css` — design responsive complet
+- `script.js` — menu, animations, navigation active, formulaire
+- `contact.php` — envoi du formulaire vers `olchauffage@gmail.com`
+- `mentions-legales.html`
+- `politique-confidentialite.html`
+- `robots.txt`
+- `sitemap.xml`
+- `site.webmanifest`
+- favicons + logos officiels dans `assets/`
 
-## Arborescence
+## Informations intégrées
 
-```
-/
-├── index.html                     page principale
-├── mentions-legales.html
-├── politique-confidentialite.html
-├── style.css                      variables CSS + mobile-first
-├── script.js                      menu, scroll, filtres, formulaire
-├── robots.txt
-├── sitemap.xml
-├── favicon.ico
-├── favicon-16x16.png
-├── favicon-32x32.png
-├── apple-touch-icon.png
-└── assets/
-    ├── icons/
-    │   ├── icon-192.png
-    │   └── icon-512.png
-    └── images/
-        ├── logo-ol.png                    logo officiel détouré (version verticale)
-        ├── logo-ol-blanc.png              même logo, texte blanc (fonds sombres)
-        ├── logo-ol-horizontal.png         version navbar (symbole + texte côte à côte)
-        ├── logo-ol-horizontal-blanc.png   version footer
-        ├── logo-ol-symbole.png            symbole OL seul (base des favicons)
-        ├── og-image.jpg                   1200x630, partage réseaux sociaux
-        └── placeholder-*.svg              11 emplacements photo
-```
+- Téléphone : 079 521 86 84
+- E-mail : olchauffage@gmail.com
+- Adresse : Z.I. Grands-Longs-Champs 7, 1562 Corcelles-près-Payerne
+- Horaires : lundi à samedi, 07:00–17:00 ; dimanche fermé
+- Domaines : chauffage, sanitaire, ventilation
+- Fondation : 2020
+- IDE : CHE-460.623.141
+- Registre du commerce : CH-550.1.189.079-0
+- Gérant : Liridon Osmanaj
+- Brevet fédéral et formation de formateur d’apprentis
+- Services affichés : pompes à chaleur, solaire thermique, chauffage au sol, radiateurs, sanitaire intérieur/extérieur, dépannage sanitaire de jour, double flux, etc.
 
----
+## Formulaire
 
-## À compléter avant mise en ligne
+Le formulaire utilise `contact.php` et la fonction PHP `mail()`.
 
-Tous les emplacements sont repérés dans le navigateur par un surlignage rouge
-(classe CSS `a-completer`). Une fois l'information saisie, **supprimer la classe
-`a-completer`** sur l'élément concerné : le surlignage disparaît.
+Avant la mise en ligne :
+1. vérifier que l’hébergement supporte PHP 7.4+ ;
+2. vérifier que `mail()` ou le système de courrier sortant du serveur est actif ;
+3. faire un envoi de test réel après déploiement.
 
-### 1. Coordonnées (apparaissent à 3 endroits)
+Si le serveur ne permet pas `mail()`, remplacer le backend par SMTP ou Formspree.
 
-| Info | Fichier | Emplacements |
-|---|---|---|
-| Téléphone | `index.html` | bandeau info, section contact, footer |
-| E-mail | `index.html` | bandeau info, section contact, footer |
-| Horaires | `index.html` | bandeau info, section contact |
+## Domaine
 
-Penser aux liens : `href="tel:+41XXXXXXXXX"` et `href="mailto:..."`.
+Le SEO est configuré pour :
 
-### 2. Fiche entreprise (section « L’entreprise »)
+`https://www.olchauffage.com/`
 
-Année de création, collaborateurs, certifications, zone d’intervention.
-Les lignes non souhaitées peuvent simplement être supprimées.
+Si le futur domaine change, remplacer cette URL dans :
+- `index.html`
+- `mentions-legales.html`
+- `politique-confidentialite.html`
+- `robots.txt`
+- `sitemap.xml`
 
-### 3. Avis Google
+## Avis Google
 
-- Bouton « Voir les avis Google » : remplacer `href="#"` par l’URL de la fiche Google Business.
-- Les 3 cartes d’avis sont des emplacements vides — y coller de vrais avis
-  (nom + texte). **Aucun faux avis n’a été écrit.**
+Le site affiche `4,6/5 · 10 avis Google`, donnée fournie pour ce projet. Le JSON-LD ne contient volontairement pas d’`aggregateRating` auto-déclaré.
 
-### 4. Services
+## Photos de chantiers
 
-Les textes des 3 services sont volontairement factuels et généraux. À valider ou
-réécrire avec le client. Pour ajouter des sous-services : décommenter le bloc
-`<ul class="service__points">` présent dans chaque service.
+La version actuelle ne présente aucune photo de banque d’images comme une réalisation réelle de l’entreprise. Le site repose volontairement sur un design graphique/technique premium.
 
-### 5. Domaine
+Pour améliorer encore la crédibilité plus tard, le meilleur ajout serait une galerie de vraies photos de chantiers et de l’équipe.
 
-Remplacer `https://www.ol-chauffage.ch` par le domaine définitif dans :
-`index.html` (canonical, OpenGraph, JSON-LD), `mentions-legales.html`,
-`politique-confidentialite.html`, `robots.txt`, `sitemap.xml`.
+## Déploiement
 
-### 6. Données structurées (JSON-LD, dans `index.html`)
+Déposer le contenu du dossier à la racine web du domaine. Activer HTTPS, puis tester :
 
-Volontairement limitées aux informations confirmées. À ajouter une fois connues :
-
-```json
-"telephone": "+41 XX XXX XX XX",
-"email": "contact@exemple.ch",
-"geo": { "@type": "GeoCoordinates", "latitude": 46.83, "longitude": 6.95 },
-"openingHoursSpecification": [{
-  "@type": "OpeningHoursSpecification",
-  "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-  "opens": "07:30", "closes": "17:00"
-}],
-"sameAs": ["https://www.google.com/maps/place/..."]
-```
-
-> La note 4,6/5 est affichée sur le site (donnée transmise par l’entreprise) mais
-> **volontairement absente du balisage `aggregateRating`** : Google ignore et
-> peut sanctionner une note auto-déclarée par l’entreprise sur son propre site.
-> Les étoiles dans les résultats de recherche viennent de la fiche Google Business.
-
-### 7. Mentions légales / confidentialité
-
-IDE (CHE-…), registre du commerce, responsable de publication, hébergeur, for
-juridique, durée de conservation des données, date de mise à jour.
-
----
-
-## Formulaire de contact
-
-Le formulaire est prêt pour **Formspree** (ou tout backend acceptant un POST
-`multipart/form-data` et répondant en JSON).
-
-1. Créer un formulaire sur formspree.io → récupérer l’identifiant.
-2. Dans `index.html`, remplacer :
-   ```html
-   <form ... action="https://formspree.io/f/VOTRE_ID" method="POST">
-   ```
-3. C’est tout : `script.js` gère la validation, l’état « Envoi en cours… »,
-   le message de succès et le message d’erreur.
-
-Tant que `VOTRE_ID` est présent, le formulaire n’envoie rien et affiche un
-message explicite. Un champ anti-spam invisible (`_gotcha`) est déjà en place.
-
-**Alternative PHP** (hébergement mutualisé type Infomaniak) : remplacer `action`
-par `contact.php` et supprimer le bloc `fetch` dans `script.js`.
-
----
-
-## Images à remplacer (11)
-
-| Fichier placeholder | Emplacement | Format conseillé |
-|---|---|---|
-| `placeholder-hero.svg` | Hero | vertical ~1200×1400, WebP |
-| `placeholder-chauffage.svg` | Service chauffage | 1200×800, WebP |
-| `placeholder-sanitaire.svg` | Service sanitaire | 1200×800, WebP |
-| `placeholder-ventilation.svg` | Service ventilation | 1200×800, WebP |
-| `placeholder-entreprise.svg` | Section entreprise | 1200×900, WebP |
-| `placeholder-realisation-1…6.svg` | Galerie réalisations | 1200×800, WebP |
-
-Aucune photo de banque d’images n’a été utilisée : rien ne peut être pris pour un
-chantier réel de l’entreprise. Penser à mettre à jour les attributs `alt` et à
-conserver `width`/`height` (évite les sauts de mise en page).
-
-Pour ajouter une réalisation : dupliquer un `<figure class="galerie__item">` et
-adapter `data-cat` (`chauffage` | `sanitaire` | `ventilation`). Les filtres
-fonctionnent automatiquement.
-
----
-
-## Logo
-
-Le logo officiel fourni (PNG, fond blanc, composition verticale) a été détouré
-sans être redessiné : fond blanc supprimé, couleurs d’origine conservées
-(bleu `#1F57A7`, rouge `#EE2F2D`, noir `#231F20`).
-
-Pour la navbar, le symbole et le bloc texte ont été replacés côte à côte
-(`logo-ol-horizontal.png`) : en composition verticale, à hauteur de navbar, les
-deux lignes de texte devenaient illisibles.
-
-Pour revenir à la version verticale d’origine, remplacer dans `index.html` :
-
-```html
-<img src="assets/images/logo-ol-horizontal.png" ... width="1016" height="200">
-<!-- par -->
-<img src="assets/images/logo-ol.png" ... width="577" height="320">
-```
-
-et ajuster `.header__logo img { height: … }` dans `style.css`.
-
----
-
-## Personnalisation rapide
-
-Tout est piloté par des variables CSS en haut de `style.css` :
-
-```css
---bleu, --bleu-fonce, --bleu-nuit, --bleu-pale
---rouge, --rouge-fonce
---encre, --graphite, --nuit
---r-sm, --r-md            rayons
---sh-sm, --sh-md, --sh-lg ombres
---esp-1 … --esp-6         espacements
---section-y               hauteur des sections
---max-w, --gouttiere      largeurs
---font-titre, --font-texte
-```
-
----
-
-## Tests effectués
-
-Testé dans Chromium (Playwright) :
-
-- largeurs 320 / 375 / 390 / 430 / 768 / 1024 / 1440 / 1920 px — aucun
-  débordement horizontal (vérifié également en neutralisant `overflow-x`) ;
-- menu mobile : ouverture, fermeture au clic sur un lien, touche Échap, overlay ;
-- ancres : le header ne recouvre pas les titres de section ;
-- filtres de la galerie ;
-- formulaire : champs requis, validation, message d’erreur, message de blocage
-  tant que Formspree n’est pas configuré (aucun envoi réel déclenché) ;
-- aucune erreur JavaScript, aucune ancre morte.
-
-**Non vérifiable dans l’environnement de test** (réseau sortant restreint) :
-le rendu des polices Google Fonts (Barlow / Barlow Condensed) et l’affichage de
-la carte Google Maps. À contrôler visuellement après le premier déploiement.
-
----
-
-## Mise en ligne
-
-**FTP** : déposer le contenu du dossier à la racine du site (`/web` ou
-`/public_html` selon l’hébergeur). Vérifier que HTTPS est actif.
-
-**GitHub Pages** : Settings → Pages → Branch `main` / dossier `/ (root)`.
-Le fichier `.nojekyll` est déjà présent.
-
-Après mise en ligne : soumettre `sitemap.xml` dans Google Search Console et
-vérifier le JSON-LD avec le test des résultats enrichis de Google.
-
----
-
-Site réalisé par [Darko Spasenov](https://ds-digital.ch) — DS Digital Studio.
+- navigation mobile ;
+- bouton d’appel ;
+- formulaire ;
+- carte Google Maps ;
+- pages légales ;
+- affichage sur iPhone/Android et desktop.

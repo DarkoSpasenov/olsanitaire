@@ -57,9 +57,15 @@
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"],
         "opens": "07:00",
         "closes": "17:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Friday",
+        "opens": "07:00",
+        "closes": "12:00"
       }
     ],
     "knowsAbout": [
@@ -90,7 +96,7 @@
           079 521 86 84
         </a>
         <span class="utility-bar__dot" aria-hidden="true"></span>
-        <span>Lu–Sa · 07:00–17:00</span>
+        <span>Lu–Je · 07:00–17:00 · Ve · 07:00–12:00</span>
       </div>
       <div class="utility-bar__group utility-bar__group--right">
         <span>Dépannage sanitaire de jour</span>
@@ -263,6 +269,36 @@
       </div>
     </section>
 
+    <section class="section field-gallery" id="terrain" aria-labelledby="terrain-title">
+      <div class="container">
+        <header class="section-head section-head--split field-gallery__head reveal">
+          <div>
+            <p class="eyebrow">Nos réalisations</p>
+            <h2 id="terrain-title">Nos réalisations.</h2>
+          </div>
+          <p>Découvrez quelques-unes de nos installations et interventions réalisées sur chantier.</p>
+        </header>
+
+        <div class="field-gallery__grid">
+          <figure class="field-gallery__item field-gallery__item--wide reveal">
+            <img src="assets/images/ol-equipe-intervention.webp" alt="Techniciens OL Chauffage devant un véhicule d’intervention" width="1672" height="941" loading="lazy" decoding="async">
+          </figure>
+          <figure class="field-gallery__item reveal">
+            <img src="assets/images/ol-sanitaire-intervention.webp" alt="Technicien OL Chauffage intervenant sur une installation sanitaire" width="1672" height="941" loading="lazy" decoding="async">
+          </figure>
+          <figure class="field-gallery__item reveal">
+            <img src="assets/images/chauffage-sol-chantier.webp" alt="Installation de chauffage au sol sur un chantier" width="1152" height="1536" loading="lazy" decoding="async">
+          </figure>
+          <figure class="field-gallery__item reveal">
+            <img src="assets/images/installation-sanitaire-encastree.webp" alt="Installation sanitaire encastrée avec bâti-support et raccordements" width="1152" height="1536" loading="lazy" decoding="async">
+          </figure>
+          <figure class="field-gallery__item reveal">
+            <img src="assets/images/raccordements-sanitaire-chantier.webp" alt="Raccordements sanitaires préparés dans une construction neuve" width="1152" height="1536" loading="lazy" decoding="async">
+          </figure>
+        </div>
+      </div>
+    </section>
+
     <section class="emergency" id="depannage">
       <div class="container emergency__grid">
         <div class="emergency__content reveal">
@@ -271,7 +307,7 @@
           <p>OL Chauffage intervient notamment pour les fuites d’eau, canalisations bouchées, problèmes de robinetterie et réparations de conduites. Le service de dépannage est proposé pendant les heures d’ouverture.</p>
           <div class="emergency__actions">
             <a class="btn btn--white btn--lg" href="tel:+41795218684">Appeler le 079 521 86 84</a>
-            <span>Lu–Sa · 07:00–17:00</span>
+            <span>Lu–Je · 07:00–17:00 · Ve · 07:00–12:00</span>
           </div>
         </div>
         <div class="emergency__visual reveal" aria-hidden="true">
@@ -411,8 +447,9 @@
           </div>
 
           <div class="opening-hours">
-            <div><span>Lundi – vendredi</span><strong>07:00 – 17:00</strong></div>
-            <div><span>Dimanche</span><strong>Fermé</strong></div>
+            <div><span>Lundi – jeudi</span><strong>07:00 – 17:00</strong></div>
+            <div><span>Vendredi</span><strong>07:00 – 12:00</strong></div>
+            <div><span>Samedi – dimanche</span><strong>Fermé</strong></div>
           </div>
         </div>
 
@@ -516,8 +553,9 @@
 
       <div class="footer__column">
         <h2>Horaires</h2>
-        <p>Lu–Sa<br><strong>07:00–17:00</strong></p>
-        <p>Dimanche<br><strong>Fermé</strong></p>
+        <p>Lu–Je<br><strong>07:00–17:00</strong></p>
+        <p>Vendredi<br><strong>07:00–12:00</strong></p>
+        <p>Sa–Di<br><strong>Fermé</strong></p>
       </div>
     </div>
 
